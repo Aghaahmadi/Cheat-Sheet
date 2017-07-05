@@ -1,0 +1,34 @@
+Git
+
+Make a new branch:
+git branch name
+
+Switch to branch:
+git checkout name
+
+Status:
+git status 
+
+Return to Master:
+git checkout master
+
+Create new branch and switch to it:
+git checkout -b name
+
+List of all branches:
+git branch
+
+Commit:
+git commit -m 'comment'
+
+Git ignore on GitHub:
+File name: .gitignore
+
+Share code, notes, and snippets:
+gist.github.com
+
+Solve binary conflicts:
+git checkout —ours
+git checkout —theirs —filename.aaa
+git add filename.aaa
+git commit -a -m ‘message’
