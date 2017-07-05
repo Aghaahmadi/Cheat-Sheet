@@ -1,0 +1,67 @@
+tar -zcf public_html.tar.gz /home/path/public_html
+mysqldump --opt -Q -u USERNAME -p'PASSWORD' DATABASE | gzip> FILENAME.sql.gz
+
+mysqldump --opt -Q -u USERNAME -p'PASSWORD' DATABASE> FILENAME.sql
+mysqldump --opt -Q -u USERNAME -p'PASSWORD' DATABASE | gzip> FILENAME.sql.gz
+
+mysql -u USERNAME -p DATABASE < FILENAME.sql
+
+tar -zcf FILENAME.tar.gz /home/PATH/public_html
+
+ssh DOMAIN.com -l root
+lftp ftp.DOMAIN.net -u USERNAME
+mirror -R
+
+cp -rf . /home/PATH/public_html/
+
+tar -xzf FILENAME.tar.gz     	(untar & decompress)
+gunzip FILENAME.sql.gz			(decompress)
+rm -rf DIRECTORY				(remove directory)
+chown USERNAME DIRECTORY -R	(change owner)
+
+service httpd restart
+/etc/init.d/apache2 restart
+
+
+vi filename		(edit file)  (:q 	:wq)  (http://www.cs.colostate.edu/helpdocs/vi.html)
+
+httpd.conf path:  /etc/httpd/conf/httpd.conf
+
+os version
+more /etc/issue
+cat /etc/*release
+
+find / -name "error_log" -print
+
+nano /etc/httpd/conf/httpd.conf
+vi /etc/httpd/conf/httpd.conf
+
+df -h			(Disk Space)
+du -s public_html
+
+update php & mysql: http://www.atomicorp.com/wiki/index.php/PHP
+
+mysql --user=admin --password=PASSWORD
+mysqlshow --user=admin --password=PASSWORD DATABASENAME
+
+sudo cp -f -r * /home/PATH/public_html
+
+/var/www/vhosts/PATH/httpdocs
+
+wget ftp://ftp.DOMAIN.net/PATH/FILENAME.tar.gz --user USERNAME --password 'PASSWORD'
+
+reboot:
+/sbin/reboot
+
+
+Repair Database:
+mysqlcheck --all-databases -a -u USERNAME -p                               #analyze
+mysqlcheck --all-databases -r -u USERNAME -p                               #repair
+mysqlcheck --all-databases -o -u USERNAME -p                               #optimize
+
+php.ini path:
+php -i |grep php.ini
+
+show full path in SSH command prompt:
+Put in your home .bashrc
+PS1='\u@\h:\w\$ '
